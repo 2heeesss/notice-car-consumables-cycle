@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>사용자 맞춤 자동차 소모품 교환주기 알림서비스</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="main.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/7e72178ed5.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .graph {
+        height: 40px;
+        background: #ccc;
+        border-radius: 40px;
+      }
+      .graph span {
+        display: block;
+        padding: 0 10px;
+        height: 40px;
+        line-height: 40px;
+        text-align: right;
+        border-radius: 40px;
+        box-sizing: border-box;
+        color: #fff;
+      }
+      .graph.stack1 span {
+        background: violet;
+        animation: stack1 2s 1;
+      }
+      .graph.stack2 span {
+        background: skyblue;
+        animation: stack2 2s 1;
+      }
+      .graph.stack3 span {
+        background: orange;
+        animation: stack3 2s 1;
+      }
+      @keyframes stack1 {
+        0% {
+          width: 0;
+          color: rgba(255, 255, 255, 0);
+        }
+        100% {
+          width: 75;
+        }
+      }
+      @keyframes stack2 {
+        0% {
+          width: 0;
+          color: rgba(255, 255, 255, 0);
+        }
+        100% {
+          width: 60;
+        }
+      }
+      @keyframes stack3 {
+        0% {
+          width: 0;
+          color: rgba(255, 255, 255, 0);
+        }
+        100% {
+          width: 25;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header id="header">
+      <nav class="navbar">
+        <div class="navbar-logo">
+          <h1><a href="index.html">로고</a></h1>
+        </div>
+
+        <ul class="navbar-menu">
+          <li><a href="">HOME</a></li>
+          <li><a href="">PRODUCT</a></li>
+          <li><a href="">SERVICES</a></li>
+          <li><a href="">ABOUT</a></li>
+          <li><a href="">CONTACT</a></li>
+        </ul>
+
+        <a href="#" class="navbar-toggleBtn">
+          <i class="fas fa-bars"></i>
+        </a>
+      </nav>
+    </header>
+    <section>
+      <article>
+        <div id="user-data">
+          <div>
+            <strong>운행패턴 분석:</strong><span id="user-analysis">dsaf</span>
+            <br />
+            <br />
+          </div>
+        </div>
+      </article>
+      <article>
+        <div class="result-wrap">
+          <div class="result1">
+            <span>엔진오일</span>
+            <div class="graph stack1">
+              <span style="width: 75%;">75%</span>
+            </div>
+            <small>3개월뒤 교체</small>
+          </div>
+          <div class="result2">
+            <span>엔진필터</span>
+            <div class="graph stack2">
+              <span style="width: 60%;">60%</span>
+            </div>
+          </div>
+          <div class="result3">
+            <span>연료필터</span>
+            <div class="graph stack3">
+              <span style="width: 25%;">25%</span>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+    <footer>
+      <small>사용자 맞춤 자동차 소모품 교환주기 알림서비스</small>
+    </footer>
+  </body>
+</html>
